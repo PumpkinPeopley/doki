@@ -1,39 +1,274 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading...</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #000;
-    }
+				<!DOCTYPE html>
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <iframe id="game" allowfullscreen></iframe>
+				<html>
 
-  <script>
-    const encoded =
-      "aHR0cHM6Ly93d3cuZ2FtZW5vcmEuY29tL3NwbGFzaC9kb2tpLWRva2ktbGl0ZXJhdHVyZS1jbHViLw==";
 
-    document.getElementById("game").src = atob(encoded);
-  </script>
-</body>
-</html>
+
+				<head>
+
+					<meta charset="utf-8">
+
+					<title>Doki Doki Literature Club!</title>
+
+					<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+					<meta name="description" content="Doki Doki Literature Club! is a fun anime-style visual novel you can play right in your browser. Join a high school literature club in this interactive story game filled with charming characters, heartfelt storytelling, and maybe even a touch of romance. As a browser game, Doki Doki Literature Club! makes it easy to start playing instantly and get drawn into a world of friendship, literature, and poetry.
+
+Join the Literature Club and Meet Adorable Characters
+Step into the role of a new club member and spend your afternoons with four adorable anime friends. Each character has a unique personality: there’s a cheerful best friend, a shy bookworm, a spunky manga lover, and a confident club president leading the group. Share poems, chat after school, and build bonds with each club member. You’ll feel like you’re part of a sweet circle of friends in this story-driven adventure.
+
+Write Poems &amp; Shape Your Story
+In each chapter, write a poem by picking your favorite words to impress your favorite club member. Every choice you make – from which club member to spend time with to the poems you create – helps shape your personal story. This dating sim for browser offers special scenes and heartwarming moments with the club member you grow closest to.
+
+
+  Credits
+  Doki Doki Literature Club! was created by Team Salvato.
+  
+    Dan Salvato – Creator, Director, Writer, Composer
+    Monika – Character Design, Art Direction
+    Nikki Simons – Assistant Developer
+    Sunder – Music Composer
+    Various Collaborators – Additional Art, Voices, and Programming
+  
+
+  Support the Creators
+  You can support the creators and purchase Doki Doki Literature Club! on the official website or through platforms like Steam. The game is free to download, but additional support through donations or the games Patreon can help Team Salvato continue to make more amazing content.
+  
+  
+    Official Website
+Get Doki Doki Literature Club Plus!
+ on Steam
+Buy Merch
+  
+
+
+
+Free Anime Game Online – No Download Needed
+Ready to join the club? Doki Doki Literature Club! is completely free to play and runs right in your web browser, so there’s no download required. This free anime game online lets you dive into a colorful visual novel anytime, anywhere. Enjoy a charming interactive story at your own pace – perfect for players looking for a lighthearted escape into an anime-style world!
+
+
+">
+
+					<meta name="robots" content="noindex">
+
+		            <link rel="canonical" href="https://www.gamenora.com/game/doki-doki-literature-club/" />
+
+					<link rel="stylesheet" type="text/css" href="https://www.gamenora.com/content/themes/arcade-one/css/style.css" />
+
+					<style type="text/css">
+
+						body {
+
+							color: #eee;
+
+							position: inherit;
+
+							margin: 0;
+
+							padding: 0;
+
+							overflow: hidden;
+
+							height: 100%;
+
+							background: #000;
+
+						}
+
+
+
+						#splash-game-content {
+
+							position: absolute;
+
+							top: 0;
+
+							left: 0;
+
+							width: 0;
+
+							height: 0;
+
+							overflow: hidden;
+
+							max-width: 100%;
+
+							max-height: 100%;
+
+							min-width: 100%;
+
+							min-height: 100%;
+
+							box-sizing: border-box;
+
+						}
+
+
+
+						.splash {
+
+							background: linear-gradient(-45deg, #7887db, #e86195);
+
+							position: absolute;
+
+							top: 0;
+
+							left: 0;
+
+							bottom: 0;
+
+							width: 100%;
+
+							z-index: 1;
+
+						}
+
+
+
+						.splash-content {
+
+							position: absolute;
+
+							top: 50%;
+
+							left: 50%;
+
+							z-index: 2;
+
+							transform: translate(-50%, -50%);
+
+						}
+
+
+
+						.splash-content img {
+
+							width: 180px;
+
+							height: auto;
+
+							border: 2px solid #fff;
+
+							border-radius: 8px;
+
+						}
+
+
+
+						.btn-play {
+
+							width: 184px;
+
+							height: 60px;
+
+							font-size: 20px;
+
+							font-weight: bold;
+
+							margin-top: 15px;
+
+							background: rgba(255, 255, 255, 0.8);
+
+							border: none;
+
+							border-radius: 40px;
+
+						}
+
+
+
+						.btn-play:hover {
+
+							cursor: pointer;
+
+						}
+
+
+
+						.splash-game-title {
+
+							position: absolute;
+
+							top: 95%;
+
+							left: 50%;
+
+							transform: translate(-50%, -50%);
+
+							font-size: 20px;
+
+						}
+
+					</style>
+
+				</head>
+
+
+
+				<body>
+
+					<div class="splash" id="splash">
+
+						<div class="splash-content">
+
+							<div class="splash-thumbnail">
+
+								<img src="https://thumbnails.gamenora.com/Doki%20Doki%20Literature%20Club%21.webp">
+
+							</div>
+
+							<button class="btn-play" onclick="play_game()">Play</button>
+
+						</div>
+
+						<div class="splash-game-title">Doki Doki Literature Club!</div>
+
+					</div>
+
+					<iframe id="splash-game-content" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" data-src="https://html5.gdata1.com/Doki%20Doki%20Literature%20Club!/?v=20260813135458"></iframe>
+
+					<script type="text/javascript">
+
+						// previously on head <script type="text/javascript" src="/js/api.js"><\/script>
+
+						function play_game() {
+
+							document.getElementById("splash").style.opacity = "0.8";
+
+
+
+							document.querySelector(".splash-content").innerHTML =
+
+								'<h3 style="text-align:center">Loading...</h3>';
+
+
+
+							document.getElementById("splash-game-content").src =
+
+								document.getElementById("splash-game-content").dataset.src;
+
+
+
+							document.getElementById("splash-game-content").onload = function() {
+
+								document.getElementById("splash").remove();
+
+							};
+
+						}
+
+						// ca_api.on_ad_closed = ()=>{
+
+						// 	//
+
+						// }
+
+					</script>
+
+				</body>
+
+
+
+				</html>
+
